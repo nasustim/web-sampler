@@ -18,7 +18,7 @@ _app.get("/",function(req,res){
     res.render("index",{});
 });
 _app.post("/add",function(req,res){
-    let date = new Date();
+    var date = new Date();
     console.log("+");
     console.log(req.body);
     if(req.body.dat === "clear"){
