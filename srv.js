@@ -1,6 +1,6 @@
-var _express = require("express");
-var _app = _express();
-var bodyParser = require('body-parser');
+const _express = require("express");
+const _app = _express();
+const bodyParser = require('body-parser');
 
 _app.use(bodyParser.json());
 _app.set("view engine","ejs");
@@ -12,13 +12,20 @@ var _server = _app.listen(8081,function(){
 
 var add = [];
 
+const date = new Date();
+
 _app.get("/",function(req,res){
     res.render("index",{});
 });
 _app.post("/add",function(req,res){
     console.log("+");
     console.log(req.body);
-    add.push(req.body.dat);
+    if(req.body.dat === "clear"){
+        add = [];
+        res.json({result: "clear"});
+        return;
+    }
+    add.push(req.body.dat  + " - " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
     res.json({result: "success"});
 });
 _app.post("/pull",function(req,res){
