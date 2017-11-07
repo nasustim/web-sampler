@@ -1,0 +1,36 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var aa = function(){
+    $.ajax({
+        url: '/pull',
+        type: 'POST',
+        data: JSON.stringify({
+            data: "right"
+        }),
+        contentType: 'application/json',
+        success: function (data) {
+
+            var aaa = 0;
+
+
+            for(var i in data){
+                aaa += data[i] + "</br>";
+            }
+
+            console.log(aaa);
+
+            document.getElementById("dd").innerHTML = aaa;
+        }
+    });
+    }
+
+
+    setInterval("aa()",1000);
+</script>
+</head>
+<body>
+<div id="dd" style="width: 100%; height: 100%;"></div>
+</body>
+</html>
