@@ -6,7 +6,7 @@ for(var i in sound){
     se[i] = $("#"+sound[i]+"-s");
 }
 
-$("#Up").click(function(){
+$("#up").click(function(){
     se[0][0].currentTime = 0;
     se[0][0].play();
     console.log("aa");
@@ -37,7 +37,7 @@ $("#straight").click(function(){
         }
     });
 });
-$("#Down").click(function(){
+$("#down").click(function(){
     se[2][0].currentTime = 0;
     se[2][0].play();
     $.ajax({
@@ -52,7 +52,7 @@ $("#Down").click(function(){
         }
     });
 });
-$("#Left").click(function(){
+$("#left").click(function(){
     se[3][0].currentTime = 0;
     se[3][0].play();
     $.ajax({
@@ -82,7 +82,7 @@ $("#clear").click(function(){
         }
     });
 });
-$("#Right").click(function(){
+$("#right").click(function(){
     se[5][0].currentTime = 0;
     se[5][0].play();
     $.ajax({
