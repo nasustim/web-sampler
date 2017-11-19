@@ -1,4 +1,4 @@
-const sound = ["Up","straight","Down","Left","clear","Right"];//,"back"];
+const sound = ["up","straight","down","left","clear","right"];//,"back"];
 
 var se = [];
 
