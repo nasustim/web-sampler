@@ -29,7 +29,7 @@ $("#straight").click(function(){
         url: '/add',
         type: 'POST',
         data: JSON.stringify({
-            dat: "goahead"
+            dat: "straight"
         }),
         contentType: 'application/json',
         success: function (data) {
