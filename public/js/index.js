@@ -1,4 +1,4 @@
-const sound = ["up","goahead","down","left","clear","right","back"];
+const sound = ["Up","straight","Down","Left","clear","Right"];//,"back"];
 
 var se = [];
 
@@ -6,7 +6,7 @@ for(var i in sound){
     se[i] = $("#"+sound[i]+"-s");
 }
 
-$("#up").click(function(){
+$("#Up").click(function(){
     se[0][0].currentTime = 0;
     se[0][0].play();
     console.log("aa");
@@ -22,7 +22,7 @@ $("#up").click(function(){
         }
     });
 });
-$("#goahead").click(function(){
+$("#straight").click(function(){
     se[1][0].currentTime = 0;
     se[1][0].play();
     $.ajax({
@@ -37,7 +37,7 @@ $("#goahead").click(function(){
         }
     });
 });
-$("#down").click(function(){
+$("#Down").click(function(){
     se[2][0].currentTime = 0;
     se[2][0].play();
     $.ajax({
@@ -52,7 +52,7 @@ $("#down").click(function(){
         }
     });
 });
-$("#left").click(function(){
+$("#Left").click(function(){
     se[3][0].currentTime = 0;
     se[3][0].play();
     $.ajax({
@@ -82,7 +82,7 @@ $("#clear").click(function(){
         }
     });
 });
-$("#right").click(function(){
+$("#Right").click(function(){
     se[5][0].currentTime = 0;
     se[5][0].play();
     $.ajax({
@@ -96,7 +96,7 @@ $("#right").click(function(){
             console.log("success");
         }
     });
-});
+});/*
 $("#back").click(function(){
     se[6][0].currentTime = 0;
     se[6][0].play();
@@ -111,4 +111,4 @@ $("#back").click(function(){
             console.log("success");
         }
     });
-});
+});*/
