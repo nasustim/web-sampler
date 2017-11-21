@@ -17,6 +17,9 @@ var add = [];
 _app.get("/",function(req,res){
     res.render("index",{});
 });
+_app.get("/foot",function(req,res){
+    res.render("foot",{});
+});
 _app.post("/add",function(req,res){
     var date = new Date();
     console.log("+");

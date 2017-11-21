@@ -16,7 +16,7 @@ $("#up").click(function(){
         url: '/add',
         type: 'POST',
         data: JSON.stringify({
-            dat: "up"
+            dat: "foot-up"
         }),
         contentType: 'application/json',
         success: function (data) {
@@ -31,7 +31,7 @@ $("#straight").click(function(){
         url: '/add',
         type: 'POST',
         data: JSON.stringify({
-            dat: "straight"
+            dat: "foot-straight"
         }),
         contentType: 'application/json',
         success: function (data) {
@@ -46,7 +46,7 @@ $("#down").click(function(){
         url: '/add',
         type: 'POST',
         data: JSON.stringify({
-            dat: "down"
+            dat: "foot-down"
         }),
         contentType: 'application/json',
         success: function (data) {
@@ -61,7 +61,7 @@ $("#left").click(function(){
         url: '/add',
         type: 'POST',
         data: JSON.stringify({
-            dat: "left"
+            dat: "foot-left"
         }),
         contentType: 'application/json',
         success: function (data) {
@@ -76,7 +76,7 @@ $("#clear").click(function(){
         url: '/add',
         type: 'POST',
         data: JSON.stringify({
-            dat: "clear"
+            dat: "foot-clear"
         }),
         contentType: 'application/json',
         success: function (data) {
@@ -91,7 +91,7 @@ $("#right").click(function(){
         url: '/add',
         type: 'POST',
         data: JSON.stringify({
-            dat: "right"
+            dat: "foot-right"
         }),
         contentType: 'application/json',
         success: function (data) {
