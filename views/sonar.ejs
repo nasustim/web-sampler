@@ -1,0 +1,24 @@
+<html lang="ja">
+<head>
+    <title>index</title>
+    <link rel="stylesheet" href="css/foot.css">
+</head>
+<body>
+<div id="grid">
+    <% const sound = ["sonar"];//,"back"]; %>
+    <% for(var i in sound){ %>
+    <div id="<%= sound[i] %>"><%= sound[i] %></div>
+    <% } %>
+</div>
+
+<% for(var i in sound){ %>
+<audio id="<%= sound[i] %>-s" preload="auto">
+    <source src="res/<%= sound[i] %>.mp3" type="audio/mp3">
+</audio>
+<% } %>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/sonar.js"></script>
+</html>

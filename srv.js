@@ -20,6 +20,9 @@ _app.get("/",function(req,res){
 _app.get("/foot",function(req,res){
     res.render("foot",{});
 });
+_app.get("/sonar",function(req,res){
+    res.render("sonar",{});
+});
 _app.post("/add",function(req,res){
     var date = new Date();
     console.log("+");
