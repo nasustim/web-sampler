@@ -1,4 +1,4 @@
-const sound = ["sonar"];
+const sound = ["sonar","reflect"];
 
 var p = 0;
 
@@ -17,6 +17,22 @@ $("#sonar").click(function(){
         type: 'POST',
         data: JSON.stringify({
             dat: "sonar"
+        }),
+        contentType: 'application/json',
+        success: function (data) {
+            console.log("success");
+        }
+    });
+});
+$("#reflect").click(function(){
+    se[1][0].currentTime = 0;
+    se[1][0].play();
+    console.log("aa");
+    $.ajax({
+        url: '/add',
+        type: 'POST',
+        data: JSON.stringify({
+            dat: "reflect"
         }),
         contentType: 'application/json',
         success: function (data) {
